@@ -28,7 +28,10 @@ const encontradoSchema = new mongoose.Schema({
     fecha_encontrado: { type: Date, required: true },
     contacto_nombre: { type: String, required: true },
     contacto_telefono: { type: String, required: true }
+
 });
+
+
 
 //Perdidos
 
