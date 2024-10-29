@@ -39,7 +39,7 @@ export const crearEncontrado = async (req, res, next) => {
     const guardado = await nuevoEncontrado.save();
     
     res.status(200).json({
-      message: "Registro de mascota encontrado guardado con éxito.",
+      message: "Registro de mascota encontrada guardado con éxito.",
       data: guardado
     });
   } catch (error) {

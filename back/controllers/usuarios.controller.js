@@ -1,7 +1,7 @@
 import { Usuario } from '../data/mongoDb.js';
 // Hash y JWT
-import bcrypt from 'bcrypt' // Hacer hash a nuestros pass
-import jwt from 'jsonwebtoken' // Crear y leer token
+import bcrypt from 'bcrypt' 
+import jwt from 'jsonwebtoken' 
 import { JWT_SECRET, __dirname } from '../config/config.js';
 
 
@@ -22,7 +22,6 @@ export const authLogin = async (req, res, next) => {
         }
     
         // Crear jwt y devuelvo el usuario
-        // create and sign a new token(contenido purpura, llave privada, opciones(cuado expira))
         const token = jwt.sign({username:username}, JWT_SECRET, {expiresIn: '1h'});
     
         res.status(200).json({data: userCreated, message: "Correcto login", token})
@@ -34,7 +33,7 @@ export const authLogin = async (req, res, next) => {
     export const createRegister =  async (req, res, next) => {
         try {
             const {name, username, password, image='https://picsum.photos/200'} = req.body;
-            // Hash de contraseña con bcrypt(importante el orden)
+            // Hash de contraseña con bcrypt
             const hashedPassword = await bcrypt.hash(password, 10);
     
             const newUser = new Usuario({name, username, password:hashedPassword, image:"https://picsum.photos/200"});

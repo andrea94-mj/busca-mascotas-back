@@ -36,12 +36,12 @@ app.use((err, req, res, next)=>{
 });
 
 app.post('/api/v1/upload', upload.single('profile'), (req, res, next) => {
-    debug.blue("Subiendo Archivo con name 'profile'");
+    debug.blue("Subiendo Archivo");
     try {
 
-        console.log("file es ", req.file); // req.file info del archivo
-        console.log("body es:", req.body); // otros campos si existieran
-        debug.magenta("Titulo del form es ", req.body.titulo);
+        console.log("file es ", req.file); 
+        console.log("body es:", req.body); 
+        debug.magenta("El titulo del form es ", req.body.titulo);
 
         res.status(200).json({
             msg: "Archivo subido correctamente",
@@ -61,12 +61,12 @@ app.post('/api/v1/upload', upload.single('profile'), (req, res, next) => {
 app.get("/", (req, res)=> {
     res.setHeader("Content-Type", "text/html")
 
-    const hola = `<h1>Bienvenidos a nuestra REST-API</h1>
-    <p> Este proyecto trata de un hotel </p>
+    const proyecto = `<h1>Bienvenidos a nuestra BuscaMascotas</h1>
+    <p> Este proyecto es una aplicación para buscar y encontrar mascotas </p>
     `
-    res.status(200).send(hola)
+    res.status(200).send(proyecto)
 });
 
 app.listen(PORT, () => {
-    console.log(`Server running on ${DOMAIN}:${PORT}`);
+    console.log(`Servidor corriendo en: ${DOMAIN}:${PORT}`);
 });

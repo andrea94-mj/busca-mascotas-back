@@ -1,6 +1,7 @@
 import {Router} from 'express';
 import { crearEncontrado, getEncontrados } from '../controllers/encontrados.controller.js';
 import { createRegister, authLogin } from '../controllers/usuarios.controller.js';
+import { crearPerdido, getPerdidos } from '../controllers/perdidos.controller.js';
 
 
 const router = Router();
@@ -9,6 +10,11 @@ const router = Router();
 router.get("/encontrados", getEncontrados);
 
 router.post("/nuevoEncontrado", crearEncontrado);
+
+//rutas para perdidos
+router.get("/perdidos", getPerdidos);
+
+router.post("/nuevoPerdido", crearPerdido);
 
 //rutas para usuarios
 

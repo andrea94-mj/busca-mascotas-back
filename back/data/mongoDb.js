@@ -25,7 +25,7 @@ const encontradoSchema = new mongoose.Schema({
     color: { type: String, required: true },
     genero: { type: String, default: null },
     lugar_encontrado: { type: String, required: true },
-    fecha_encontrado: { type: String, required: true },
+    fecha_encontrado: { type: Date, required: true },
     contacto_nombre: { type: String, required: true },
     contacto_telefono: { type: String, required: true }
 });
@@ -39,8 +39,8 @@ const perdidoSchema = new mongoose.Schema({
     raza: { type: String, default: null },
     color: { type: String, required: true },
     genero: { type: String, default: null },
-    lugar_encontrado: { type: String, required: true },
-    fecha_encontrado: { type: String, required: true },
+    lugar_perdido: { type: String, required: true },
+    fecha_perdido: { type: Date, required: true },
     contacto_nombre: { type: String, required: true },
     contacto_telefono: { type: String, required: true }
 });
