@@ -1,9 +1,8 @@
 import { Encontrado } from "../data/mongoDb.js";
 
-
-export const getEncontrados = async (req,res,next)=>{
+export const getEncontrados = async (req, res, next) => {
     try {
-        const encontrados = await Encontrado.find({})
+        const encontrados = await Encontrado.find({});
         res.status(200).json({ data: encontrados, message: "" });
     } catch (error) {
         res.status(500).json({ message: '', error });
@@ -13,7 +12,6 @@ export const getEncontrados = async (req,res,next)=>{
 export const crearEncontrado = async (req, res, next) => {
   try {
     const {
-      imagen,
       tipo_de_animal,
       raza,
       color,
@@ -23,6 +21,9 @@ export const crearEncontrado = async (req, res, next) => {
       contacto_nombre,
       contacto_telefono
     } = req.body;
+
+    // Usamos req.file para obtener la ruta de la imagen si se ha subido
+    const imagen = req.file ? req.file.path : null;
 
     const nuevoEncontrado = new Encontrado({
       imagen,
@@ -37,7 +38,7 @@ export const crearEncontrado = async (req, res, next) => {
     });
 
     const guardado = await nuevoEncontrado.save();
-    
+
     res.status(200).json({
       message: "Registro de mascota encontrada guardado con éxito.",
       data: guardado
@@ -49,3 +50,4 @@ export const crearEncontrado = async (req, res, next) => {
     });
   }
 };
+

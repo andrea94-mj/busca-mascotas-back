@@ -23,6 +23,8 @@ app.use(express.urlencoded({extended:true}));
 
 app.use('/api/v1', indexRoutes);
 
+app.use('/uploads', express.static('public/uploads'));
+
 app.use((err, req, res, next)=>{
     console.error(err.stack);
 

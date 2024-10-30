@@ -1,25 +1,23 @@
-import {Router} from 'express';
+import { Router } from 'express';
 import { crearEncontrado, getEncontrados } from '../controllers/encontrados.controller.js';
 import { createRegister, authLogin } from '../controllers/usuarios.controller.js';
 import { crearPerdido, getPerdidos } from '../controllers/perdidos.controller.js';
-
+import { upload } from '../middleweares/multer.js';  // Asegúrate de que la ruta sea correcta
 
 const router = Router();
 
-//rutas para encontrados
+// Rutas para encontrados
 router.get("/encontrados", getEncontrados);
 
-router.post("/nuevoEncontrado", crearEncontrado);
+// Usamos el middleware `upload.single('imagen')` para manejar un solo archivo de imagen
+router.post("/nuevoEncontrado", upload.single('imagen'), crearEncontrado);
 
-//rutas para perdidos
+// Rutas para perdidos
 router.get("/perdidos", getPerdidos);
-
 router.post("/nuevoPerdido", crearPerdido);
 
-//rutas para usuarios
-
+// Rutas para usuarios
 router.post("/registro", createRegister);
-
 router.post("/acceso", authLogin);
 
 export default router;
