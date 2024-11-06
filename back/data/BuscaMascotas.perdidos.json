@@ -1,0 +1,136 @@
+[{
+  "_id": {
+    "$oid": "6721485cb4ebd1331f7a7749"
+  },
+  "imagen": "/src/assets/labrador_negro.webp",
+  "nombre": "Max",
+  "tipo_de_animal": "Perro",
+  "raza": "Labrador",
+  "color": "Negro",
+  "genero": "Macho",
+  "lugar_perdido": "Valencia",
+  "fecha_perdido": {
+    "$date": "2024-10-29T14:30:00.000Z"
+  },
+  "contacto_nombre": "Juan Pérez",
+  "contacto_telefono": "607 95 87 32"
+},
+{
+  "_id": {
+    "$oid": "67214918b4ebd1331f7a774a"
+  },
+  "imagen": "/src/assets/gato_gris.webp",
+  "nombre": "Mini",
+  "tipo_de_animal": "Gato",
+  "raza": null,
+  "color": "Gris",
+  "genero": "Hembra",
+  "lugar_perdido": "Coslada",
+  "fecha_perdido": {
+    "$date": "2024-10-29T00:00:00.000Z"
+  },
+  "contacto_nombre": "Ana Gómez",
+  "contacto_telefono": "654 34 78 12"
+},
+{
+  "_id": {
+    "$oid": "67214f68b4ebd1331f7a774d"
+  },
+  "imagen": "/src/assets/beagle.webp",
+  "nombre": "Luna",
+  "tipo_de_animal": "Perro",
+  "raza": "Beagle",
+  "color": "Marrón, negro y blanco",
+  "genero": "Hembra",
+  "lugar_perdido": "El Prat",
+  "fecha_perdido": {
+    "$date": "2024-10-10T00:00:00.000Z"
+  },
+  "contacto_nombre": "Carlos López",
+  "contacto_telefono": "639 78 41 27"
+},
+{
+  "_id": {
+    "$oid": "67228b252b455c267c52eaca"
+  },
+  "imagen": "/src/assets/huron.webp",
+  "nombre": "Félix",
+  "tipo_de_animal": "Hurón",
+  "raza": null,
+  "color": "Marrón y blanco",
+  "genero": "Macho",
+  "lugar_perdido": "Bilbao",
+  "fecha_perdido": {
+    "$date": "2024-10-22T00:00:00.000Z"
+  },
+  "contacto_nombre": "Laura Martinez",
+  "contacto_telefono": "759 67 12 98"
+},
+{
+  "_id": {
+    "$oid": "67228b742b455c267c52eacb"
+  },
+  "imagen": "/src/assets/guacamayo.webp",
+  "nombre": "Rocky",
+  "tipo_de_animal": "Loro",
+  "raza": "Guacamayo",
+  "color": "Azul, amarillo y verde",
+  "genero": "Macho",
+  "lugar_perdido": "Oviedo",
+  "fecha_perdido": {
+    "$date": "2024-10-18T00:00:00.000Z"
+  },
+  "contacto_nombre": "Mario Sánchez",
+  "contacto_telefono": "693 57 55 92"
+},
+{
+  "_id": {
+    "$oid": "67228bdd2b455c267c52eacc"
+  },
+  "imagen": "/src/assets/gato_negro.webp",
+  "nombre": "Lola",
+  "tipo_de_animal": "Gato",
+  "raza": null,
+  "color": "Negro y blanco",
+  "genero": "Hembra",
+  "lugar_perdido": "Logroño",
+  "fecha_perdido": {
+    "$date": "2024-10-12T00:00:00.000Z"
+  },
+  "contacto_nombre": "Fátima Jarillo",
+  "contacto_telefono": "658 76 22 45"
+},
+{
+  "_id": {
+    "$oid": "67228c2b2b455c267c52eacd"
+  },
+  "imagen": "/src/assets/gato_atigrado.webp",
+  "nombre": "Pepe",
+  "tipo_de_animal": "Gato",
+  "raza": null,
+  "color": "Atigrado",
+  "genero": "Macho",
+  "lugar_perdido": "Madrid",
+  "fecha_perdido": {
+    "$date": "2024-10-19T00:00:00.000Z"
+  },
+  "contacto_nombre": "Justo Miguel",
+  "contacto_telefono": "681 45 93 71"
+},
+{
+  "_id": {
+    "$oid": "67228c702b455c267c52eace"
+  },
+  "imagen": "/src/assets/caniche_blanco.webp",
+  "nombre": "Chuchi",
+  "tipo_de_animal": "Perro",
+  "raza": "Caniche",
+  "color": "Blanco",
+  "genero": "Macho",
+  "lugar_perdido": "Santiago",
+  "fecha_perdido": {
+    "$date": "2024-10-21T00:00:00.000Z"
+  },
+  "contacto_nombre": "Luis Rodriguez",
+  "contacto_telefono": "798 57 12 79"
+}]

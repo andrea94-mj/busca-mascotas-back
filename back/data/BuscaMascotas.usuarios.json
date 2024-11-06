@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "671ff663b819a458496025c1"
+  },
+  "name": "Christian",
+  "username": "christian@gmail.com",
+  "password": "$2b$10$h7j79l80Ufq99pUcCe0BMeYpgmV2/KGYSwCpHXsDBExnJ09846X7.",
+  "image": "https://picsum.photos/200",
+  "createdAt": {
+    "$date": "2024-10-28T20:38:59.705Z"
+  },
+  "updatedAt": {
+    "$date": "2024-10-28T20:38:59.705Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "672bca16a54c5634d2812530"
+  },
+  "name": "Andrea",
+  "username": "andrea@gmail.com",
+  "password": "$2b$10$CLT6zbdvtLgg7RSH7ZWHv.qNToGYdLvvs1P58p1O4G3e6ItwifrsK",
+  "image": "https://picsum.photos/200",
+  "createdAt": {
+    "$date": "2024-11-06T19:57:10.903Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-06T19:57:10.903Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "672bcb1ea54c5634d281253a"
+  },
+  "name": "Belen",
+  "username": "belen@gmail.com",
+  "password": "$2b$10$q/P1AkoKIAFXDKZ.SF/12.5TT5Ikwvb9PXvShCRzaZAzNlhs3VVMC",
+  "image": "https://picsum.photos/200",
+  "createdAt": {
+    "$date": "2024-11-06T20:01:34.484Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-06T20:01:34.484Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "672bcb3aa54c5634d281253d"
+  },
+  "name": "Iván",
+  "username": "ivan@gmail.com",
+  "password": "$2b$10$zhRmNmqDgMP5XMFZaeWi6eWgD1IQIJEdNvKhi2cxPEYEeBBsXYZdq",
+  "image": "https://picsum.photos/200",
+  "createdAt": {
+    "$date": "2024-11-06T20:02:02.729Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-06T20:02:02.729Z"
+  }
+}]

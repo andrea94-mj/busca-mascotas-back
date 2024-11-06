@@ -1,0 +1,128 @@
+[{
+  "_id": {
+    "$oid": "67228ef02b455c267c52ead4"
+  },
+  "imagen": "/src/assets/suricata.webp",
+  "tipo_de_animal": "Suricata",
+  "raza": null,
+  "color": "Marrón",
+  "genero": "Macho",
+  "lugar_encontrado": "Tenerife",
+  "fecha_encontrado": {
+    "$date": "2024-10-21T00:00:00.000Z"
+  },
+  "contacto_nombre": "Christian Sancho",
+  "contacto_telefono": "607 95 87 32"
+},
+{
+  "_id": {
+    "$oid": "67228fbf2b455c267c52ead7"
+  },
+  "imagen": "/src/assets/chihuahua.webp",
+  "tipo_de_animal": "Perro",
+  "raza": "Chihuahua",
+  "color": "Canela",
+  "genero": "Macho",
+  "lugar_encontrado": "Paterna",
+  "fecha_encontrado": {
+    "$date": "2024-10-05T00:00:00.000Z"
+  },
+  "contacto_nombre": "Barbara Suarez",
+  "contacto_telefono": "639 78 41 27"
+},
+{
+  "_id": {
+    "$oid": "672290092b455c267c52ead8"
+  },
+  "imagen": "/src/assets/gato_siames.webp",
+  "tipo_de_animal": "Gato",
+  "raza": "Siamés",
+  "color": "Blanco",
+  "genero": "Macho",
+  "lugar_encontrado": "Palencia",
+  "fecha_encontrado": {
+    "$date": "2024-10-09T00:00:00.000Z"
+  },
+  "contacto_nombre": "Belén Sánchez",
+  "contacto_telefono": "759 67 12 98"
+},
+{
+  "_id": {
+    "$oid": "672290542b455c267c52ead9"
+  },
+  "imagen": "/src/assets/iguana.webp",
+  "tipo_de_animal": "Iguana",
+  "raza": null,
+  "color": "Verde",
+  "genero": "Hembra",
+  "lugar_encontrado": "Cádiz",
+  "fecha_encontrado": {
+    "$date": "2024-10-15T00:00:00.000Z"
+  },
+  "contacto_nombre": "Diego Gonzalez",
+  "contacto_telefono": "693 57 55 92"
+},
+{
+  "_id": {
+    "$oid": "6722909b2b455c267c52eada"
+  },
+  "imagen": "/src/assets/bulldog.webp",
+  "tipo_de_animal": "Perro",
+  "raza": "Bulldog Francés",
+  "color": "Marrón",
+  "genero": "Hembra",
+  "lugar_encontrado": "Cudillero",
+  "fecha_encontrado": {
+    "$date": "2024-10-27T00:00:00.000Z"
+  },
+  "contacto_nombre": "Jose Manuel Pérez",
+  "contacto_telefono": "658 76 22 45"
+},
+{
+  "_id": {
+    "$oid": "672290e62b455c267c52eadb"
+  },
+  "imagen": "/src/assets/cacatua.webp",
+  "tipo_de_animal": "Cacatúa",
+  "raza": null,
+  "color": "Blanco",
+  "genero": "Hembra",
+  "lugar_encontrado": "Marbella",
+  "fecha_encontrado": {
+    "$date": "2024-10-17T00:00:00.000Z"
+  },
+  "contacto_nombre": "María Belmonte",
+  "contacto_telefono": "654 34 78 12"
+},
+{
+  "_id": {
+    "$oid": "672291412b455c267c52eadc"
+  },
+  "imagen": "/src/assets/cerdo.webp",
+  "tipo_de_animal": "Cerdo",
+  "raza": null,
+  "color": "Rosa",
+  "genero": "Macho",
+  "lugar_encontrado": "León",
+  "fecha_encontrado": {
+    "$date": "2024-10-19T00:00:00.000Z"
+  },
+  "contacto_nombre": "Patricia Álvarez",
+  "contacto_telefono": "681 45 93 71"
+},
+{
+  "_id": {
+    "$oid": "672291822b455c267c52eadd"
+  },
+  "imagen": "/src/assets/conejo.webp",
+  "tipo_de_animal": "Conejo",
+  "raza": null,
+  "color": "Gris y blanco",
+  "genero": "Hembra",
+  "lugar_encontrado": "Valencia",
+  "fecha_encontrado": {
+    "$date": "2024-10-05T00:00:00.000Z"
+  },
+  "contacto_nombre": "Irina Martín",
+  "contacto_telefono": "798 57 12 79"
+}]
