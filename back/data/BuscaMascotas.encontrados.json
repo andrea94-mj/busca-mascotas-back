@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "67228ef02b455c267c52ead4"
   },
-  "imagen": "/src/assets/suricata.webp",
+  "imagen": "/suricata.webp",
   "tipo_de_animal": "Suricata",
   "raza": null,
   "color": "Marrón",
@@ -18,7 +18,7 @@
   "_id": {
     "$oid": "67228fbf2b455c267c52ead7"
   },
-  "imagen": "/src/assets/chihuahua.webp",
+  "imagen": "/chihuahua.webp",
   "tipo_de_animal": "Perro",
   "raza": "Chihuahua",
   "color": "Canela",
@@ -34,7 +34,7 @@
   "_id": {
     "$oid": "672290092b455c267c52ead8"
   },
-  "imagen": "/src/assets/gato_siames.webp",
+  "imagen": "/gato-siames.webp",
   "tipo_de_animal": "Gato",
   "raza": "Siamés",
   "color": "Blanco",
@@ -50,7 +50,7 @@
   "_id": {
     "$oid": "672290542b455c267c52ead9"
   },
-  "imagen": "/src/assets/iguana.webp",
+  "imagen": "/iguana.webp",
   "tipo_de_animal": "Iguana",
   "raza": null,
   "color": "Verde",
@@ -66,7 +66,7 @@
   "_id": {
     "$oid": "6722909b2b455c267c52eada"
   },
-  "imagen": "/src/assets/bulldog.webp",
+  "imagen": "/bulldog.webp",
   "tipo_de_animal": "Perro",
   "raza": "Bulldog Francés",
   "color": "Marrón",
@@ -82,7 +82,7 @@
   "_id": {
     "$oid": "672290e62b455c267c52eadb"
   },
-  "imagen": "/src/assets/cacatua.webp",
+  "imagen": "/cacatua.webp",
   "tipo_de_animal": "Cacatúa",
   "raza": null,
   "color": "Blanco",
@@ -98,7 +98,7 @@
   "_id": {
     "$oid": "672291412b455c267c52eadc"
   },
-  "imagen": "/src/assets/cerdo.webp",
+  "imagen": "/cerdo.webp",
   "tipo_de_animal": "Cerdo",
   "raza": null,
   "color": "Rosa",
@@ -114,7 +114,7 @@
   "_id": {
     "$oid": "672291822b455c267c52eadd"
   },
-  "imagen": "/src/assets/conejo.webp",
+  "imagen": "/conejo.webp",
   "tipo_de_animal": "Conejo",
   "raza": null,
   "color": "Gris y blanco",

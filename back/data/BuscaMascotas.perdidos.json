@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "6721485cb4ebd1331f7a7749"
   },
-  "imagen": "/src/assets/labrador_negro.webp",
+  "imagen": "/labrador-negro.webp",
   "nombre": "Max",
   "tipo_de_animal": "Perro",
   "raza": "Labrador",
@@ -19,7 +19,7 @@
   "_id": {
     "$oid": "67214918b4ebd1331f7a774a"
   },
-  "imagen": "/src/assets/gato_gris.webp",
+  "imagen": "/gato-gris.webp",
   "nombre": "Mini",
   "tipo_de_animal": "Gato",
   "raza": null,
@@ -36,7 +36,7 @@
   "_id": {
     "$oid": "67214f68b4ebd1331f7a774d"
   },
-  "imagen": "/src/assets/beagle.webp",
+  "imagen": "/beagle.webp",
   "nombre": "Luna",
   "tipo_de_animal": "Perro",
   "raza": "Beagle",
@@ -53,7 +53,7 @@
   "_id": {
     "$oid": "67228b252b455c267c52eaca"
   },
-  "imagen": "/src/assets/huron.webp",
+  "imagen": "/huron.webp",
   "nombre": "Félix",
   "tipo_de_animal": "Hurón",
   "raza": null,
@@ -70,7 +70,7 @@
   "_id": {
     "$oid": "67228b742b455c267c52eacb"
   },
-  "imagen": "/src/assets/guacamayo.webp",
+  "imagen": "/guacamayo.webp",
   "nombre": "Rocky",
   "tipo_de_animal": "Loro",
   "raza": "Guacamayo",
@@ -87,7 +87,7 @@
   "_id": {
     "$oid": "67228bdd2b455c267c52eacc"
   },
-  "imagen": "/src/assets/gato_negro.webp",
+  "imagen": "/gato-negro.webp",
   "nombre": "Lola",
   "tipo_de_animal": "Gato",
   "raza": null,
@@ -104,7 +104,7 @@
   "_id": {
     "$oid": "67228c2b2b455c267c52eacd"
   },
-  "imagen": "/src/assets/gato_atigrado.webp",
+  "imagen": "/gato-atigrado.webp",
   "nombre": "Pepe",
   "tipo_de_animal": "Gato",
   "raza": null,
@@ -121,7 +121,7 @@
   "_id": {
     "$oid": "67228c702b455c267c52eace"
   },
-  "imagen": "/src/assets/caniche_blanco.webp",
+  "imagen": "/caniche-blanco.webp",
   "nombre": "Chuchi",
   "tipo_de_animal": "Perro",
   "raza": "Caniche",
