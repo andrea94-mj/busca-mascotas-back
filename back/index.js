@@ -6,6 +6,7 @@ import { connectDB } from './data/mongoDb.js';
 import path from 'path';
 import { upload } from './middleweares/multer.js';
 import { __dirname } from './config/config.js';
+import { errorHandler } from './middleweares/error.js'; 
 
 const app = express();
 
@@ -29,19 +30,6 @@ app.use('/api/v1', indexRoutes);
 
 // Ruta archivos subidos (imagenes, etc.)
 app.use('/uploads', express.static('public/uploads'));
-
-// Middleware para manejar errores
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-
-    const responseAPI = {
-        status: 'error',
-        msg: 'Error en la API',
-        error: err.message,
-        code: 500
-    }
-    res.status(500).send(responseAPI)
-});
 
 // Ruta para subir archivos (usando multer)
 app.post('/api/v1/upload', upload.single('profile'), (req, res, next) => {
@@ -74,6 +62,9 @@ app.get("/", (req, res) => {
     `;
     res.status(200).send(proyecto);
 });
+
+// Middleware para manejar errores 
+app.use(errorHandler);
 
 // Iniciar el servidor
 app.listen(PORT, () => {
