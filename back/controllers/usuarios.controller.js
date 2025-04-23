@@ -32,8 +32,8 @@ export const authLogin = async (req, res, next) => {
         // Respondemos con el usuario, el mensaje de éxito y el token
         res.status(200).json({data: userCreated, message: "Correcto login", token});
     } catch (error) {
-        
-        res.status(500).json({error: "Error en el servidor"});
+        // Pasamos el error al middleware centralizado de manejo de errores
+        next(error);
     }
 };
 
@@ -57,8 +57,7 @@ export const createRegister = async (req, res, next) => {
         res.status(200).json({data: userCreated, message: "Registro exitoso"});
     
     } catch (error) {
-        
-        console.log(error);
-        res.status(500).json({error: error.message});
+        // Pasamos el error al middleware centralizado de manejo de errores
+        next(error);
     }
 };

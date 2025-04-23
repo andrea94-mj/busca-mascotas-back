@@ -9,8 +9,8 @@ export const getEncontrados = async (req, res, next) => {
         // Respondemos con la lista de mascotas encontradas
         res.status(200).json({ data: encontrados, message: "" });
     } catch (error) {
-        // En caso de error, respondemos con el código 500 y el mensaje de error
-        res.status(500).json({ message: '', error });
+        // Pasamos el error al middleware centralizado de manejo de errores
+        next(error);
     }
 }
 
@@ -54,11 +54,8 @@ export const crearEncontrado = async (req, res, next) => {
       data: guardado
     });
   } catch (error) {
-    // En caso de error, respondemos con un mensaje y el error correspondiente
-    res.status(500).json({
-      message: "Error al guardar el registro de mascota encontrada.",
-      error: error.message
-    });
+    // Pasamos el error al middleware centralizado de manejo de errores
+    next(error);
   }
 };
 
