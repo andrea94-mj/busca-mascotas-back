@@ -42,6 +42,7 @@ const perdidoSchema = new mongoose.Schema({
 });
 
 // Esquema para los usuarios
+// Esquema para los usuarios
 const usuarioSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -59,6 +60,11 @@ const usuarioSchema = new mongoose.Schema({
     image: {
         type: String,
         required: true  
+    },
+    role: {
+        type: String,
+        enum: ['user', 'admin'], // Solo permite estos dos valores
+        default: 'user' // Por defecto, los usuarios son normales, no administradores
     }
 },
 {

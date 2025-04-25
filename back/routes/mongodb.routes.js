@@ -1,22 +1,26 @@
 import { Router } from 'express';
-import { crearEncontrado, getEncontrados } from '../controllers/encontrados.controller.js';
+import { getEncontrados, crearEncontrado, getEncontradoById, actualizarEncontrado, eliminarEncontrado} from '../controllers/encontrados.controller.js';
+import { getPerdidos, crearPerdido, getPerdidoById, actualizarPerdido, eliminarPerdido} from '../controllers/perdidos.controller.js';
 import { createRegister, authLogin } from '../controllers/usuarios.controller.js';
-import { crearPerdido, getPerdidos } from '../controllers/perdidos.controller.js';
 import { upload } from '../middleweares/multer.js'; 
+import { adminMiddleware } from '../middleweares/admin.js';
 
 const router = Router();
 
 // Rutas para encontrados
-router.get("/encontrados", getEncontrados);
-
-// Usamos el middleware `upload.single('imagen')` para manejar un solo archivo de imagen
-router.post("/nuevoEncontrado", upload.single('imagen'), crearEncontrado);
+router.get('/encontrados', getEncontrados);
+router.get('/encontrados/:id', getEncontradoById);
+router.post('/nuevoEncontrado', upload.single('imagen'), crearEncontrado);
+router.put('/encontrados/:id', adminMiddleware, upload.single('imagen'), actualizarEncontrado);
+router.delete('/encontrados/:id', adminMiddleware, eliminarEncontrado);
 
 // Rutas para perdidos
-router.get("/perdidos", getPerdidos);
+router.get('/perdidos', getPerdidos);
+router.get('/perdidos/:id', getPerdidoById);
+router.post('/nuevoPerdido', upload.single('imagen'), crearPerdido);
+router.put('/perdidos/:id', adminMiddleware, upload.single('imagen'), actualizarPerdido);
+router.delete('/perdidos/:id', adminMiddleware, eliminarPerdido);
 
-// Usamos el middleware `upload.single('imagen')` para manejar un solo archivo de imagen
-router.post("/nuevoPerdido", upload.single('imagen'), crearPerdido);
 
 // Rutas para usuarios
 router.post("/registro", createRegister);
