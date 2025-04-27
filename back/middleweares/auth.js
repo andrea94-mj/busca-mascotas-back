@@ -15,7 +15,7 @@ export const authenticateToken = (req, res, next) => {
 
     // Verificar el token usando el JWT_SECRET, si es válido, se pasa el siguiente middleware
     jwt.verify(token, JWT_SECRET, (err, user) => {
-        if(err) return res.sendStatus(403); // Si el token es inválido o expiró, respondemos con 403 (
+        if(err) return res.sendStatus(403); // Si el token es inválido o expiró, respondemos con 403 
         
         // Si el token es válido, agregamos la información del usuario al objeto de la solicitud
         req.user = user;
