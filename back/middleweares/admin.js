@@ -22,12 +22,11 @@ export const adminMiddleware = async (req, res, next) => {
             return res.status(401).json({ message: 'Usuario no válido.' });
         }
         
-        // Verificar si el usuario es administrador (esto depende de tu modelo de usuario)
-        // Si tienes un campo "rol" o similar, puedes verificarlo aquí
-        // Por ejemplo:
-        // if (usuario.rol !== 'admin') {
-        //     return res.status(403).json({ message: 'Acceso denegado. Solo los administradores pueden realizar esta acción.' });
-        // }
+        // Verificar si el usuario es administrador 
+
+        if (usuario.role !== 'admin') {
+            return res.status(403).json({ message: 'Acceso denegado. Solo los administradores pueden realizar esta acción.' });
+        }
         
         // Añadir el usuario al objeto de solicitud para su uso posterior
         req.usuario = usuario;

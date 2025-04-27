@@ -7,32 +7,36 @@ import { JWT_SECRET, __dirname } from '../config/config.js';
 // Función para autenticar el login de un usuario
 export const authLogin = async (req, res, next) => {
     try {
-        // Desestructuramos el usuario y la contraseña del cuerpo de la solicitud
         const {username, password} = req.body;
-
-        // Buscamos el usuario en la base de datos
         const userCreated = await Usuario.findOne({ username: username });
     
-        // Si no encontramos el usuario, respondemos con un error
         if (!userCreated) {
             return res.status(400).json({message: "Usuario no encontrado"});
         }
     
-        // Comparamos la contraseña proporcionada con la guardada en la base de datos
         const isMatch = await bcrypt.compare(password, userCreated.password);
     
-        // Si las contraseñas no coinciden, respondemos con un error
         if (!isMatch) {
             return res.status(400).json({message: "Clave incorrecta"});
         }
     
-        // Creamos un token JWT con el nombre de usuario, que expira en 1 hora
-        const token = jwt.sign({username:username}, JWT_SECRET, {expiresIn: '1h'});
+        // Crear token incluyendo ID y role
+        const token = jwt.sign(
+            {
+                id: userCreated._id,
+                username: username,
+                role: userCreated.role
+            }, 
+            JWT_SECRET, 
+            {expiresIn: '1h'}
+        );
     
-        // Respondemos con el usuario, el mensaje de éxito y el token
-        res.status(200).json({data: userCreated, message: "Correcto login", token});
+        res.status(200).json({
+            data: userCreated, 
+            message: "Correcto login", 
+            token
+        });
     } catch (error) {
-        // Pasamos el error al middleware centralizado de manejo de errores
         next(error);
     }
 };
@@ -40,24 +44,102 @@ export const authLogin = async (req, res, next) => {
 // Función para registrar un nuevo usuario
 export const createRegister = async (req, res, next) => {
     try {
-        // Desestructuramos la información del nuevo usuario del cuerpo de la solicitud
-        const {name, username, password, image='https://picsum.photos/200'} = req.body;
+        const {name, username, password, image='https://picsum.photos/200', role='user'} = req.body;
+        
+        // Verificar que el role sea válido (user o admin)
+        if (role !== 'user' && role !== 'admin') {
+            return res.status(400).json({ message: "El rol debe ser 'user' o 'admin'" });
+        }
 
-        // Creamos un hash de la contraseña con bcrypt para mayor seguridad
         const hashedPassword = await bcrypt.hash(password, 10);
     
-        // Creamos un nuevo usuario con la información proporcionada
-        const newUser = new Usuario({name, username, password:hashedPassword, image});
-        await newUser.save();  // Guardamos el usuario en la base de datos
-    
-        // Buscamos el usuario recién creado
+        const newUser = new Usuario({name, username, password:hashedPassword, image, role});
+        await newUser.save();
+        
         const userCreated = await Usuario.findOne({username: username});
     
-        // Respondemos con los datos del nuevo usuario y un mensaje de éxito
         res.status(200).json({data: userCreated, message: "Registro exitoso"});
     
     } catch (error) {
-        // Pasamos el error al middleware centralizado de manejo de errores
         next(error);
     }
 };
+
+
+// Obtener todos los usuarios (solo para administradores)
+export const getAllUsers = async (req, res, next) => {
+    try {
+        const usuarios = await Usuario.find({}, '-password'); // Excluimos las contraseñas
+        
+        res.status(200).json({
+            data: usuarios,
+            message: "Lista de usuarios obtenida con éxito"
+        });
+    } catch (error) {
+        next(error);
+    }
+};
+
+// Obtener un usuario por ID
+export const getUserById = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        
+        const usuario = await Usuario.findById(id, '-password');
+        
+        if (!usuario) {
+            return res.status(404).json({ message: "Usuario no encontrado" });
+        }
+        
+        res.status(200).json({
+            data: usuario,
+            message: "Usuario encontrado con éxito"
+        });
+    } catch (error) {
+        next(error);
+    }
+};
+
+// Hacer administrador a un usuario
+export const makeAdmin = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        
+        const usuario = await Usuario.findByIdAndUpdate(
+            id,
+            { role: 'admin' },
+            { new: true, select: '-password' }
+        );
+        
+        if (!usuario) {
+            return res.status(404).json({ message: "Usuario no encontrado" });
+        }
+        
+        res.status(200).json({
+            data: usuario,
+            message: "Usuario actualizado a administrador con éxito"
+        });
+    } catch (error) {
+        next(error);
+    }
+};
+
+// Eliminar un usuario
+export const deleteUser = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        
+        const usuario = await Usuario.findByIdAndDelete(id);
+        
+        if (!usuario) {
+            return res.status(404).json({ message: "Usuario no encontrado" });
+        }
+        
+        res.status(200).json({
+            message: "Usuario eliminado con éxito"
+        });
+    } catch (error) {
+        next(error);
+    }
+};
+
