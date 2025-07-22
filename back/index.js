@@ -17,7 +17,10 @@ connectDB();
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Habilitar CORS para permitir peticiones 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: 'https://proyecto-final-fullstack-front-gsze.vercel.app'
+  }));
 
 // Habilitar JSON en las solicitudes
 app.use(express.json());
