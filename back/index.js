@@ -14,7 +14,7 @@ const app = express();
 connectDB();
 
 // Definir carpeta para archivos públicos
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 // Habilitar CORS para permitir peticiones 
 app.use(cors());
